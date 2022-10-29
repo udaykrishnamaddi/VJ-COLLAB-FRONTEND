@@ -78,7 +78,7 @@ const CollabPostForm = () => {
                 </Form.Group>
                 <Form.Group className='mb-3'>
                     <Form.Label><b>Candidates Required:</b></Form.Label>
-                    <Form.Control type="number" min={1} />
+                    <Form.Control type="number" onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()} />
                 </Form.Group>     
                 <Form.Group className='mb-3'>
                     <Form.Label><b>Description:</b></Form.Label>
