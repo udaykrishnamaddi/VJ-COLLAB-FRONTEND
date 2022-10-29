@@ -10,7 +10,7 @@ const Button = (props) => {
     }
     return (
         <button className='btn border border-dark' style={styles} onClick={props.onClick}>    
-            {props.imgUrl!=null ? <img src={props.imgUrl} style={{height: "30px", width: "30px"}} /> : <span></span>}
+            {props.imgUrl!=null ? <img src={props.imgUrl} style={{height: "30px", width: "30px"}} alt="" /> : <span></span>}
             <span> <b>{props.description}</b></span>
         </button>
     );

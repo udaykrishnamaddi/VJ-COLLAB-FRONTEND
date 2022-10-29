@@ -1,10 +1,9 @@
 import React from 'react';
 import CollabFeedCard from '../components/CollabFeedCard';
-import Button from '../subComponents/Button';
-import addIcon from '../static/icons/add-icon.png';
 import userIcon from '../static/icons/user-icon.png';
 import '../static/css/Collaboration.css';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
+import CollabPostCard from '../components/CollabPostCard';
 
 const Collaboration = (props) => {
     let data={
@@ -12,7 +11,7 @@ const Collaboration = (props) => {
         username: props.username,
         img: vjHackathon,
         title: "Frontend Developer",
-        description: "We are looking for frontend developer, our project is about developing a web site VjCollab, for students of our college. \
+        description: "We are looking for frontend developer, our project is about developing a web site VjCollab, for students of our college.\
         Intersted students please click the collab button for join with us and the end date for applying is 1/9/2022.",
         endDate: "03-11-2022",
         required: 3,
@@ -25,14 +24,14 @@ const Collaboration = (props) => {
                     <div className='col-3'>
                         <div className='profile-bar text-center w-100'>
                             <div className='profile mt-5'>
-                                <img src={userIcon} style={{height: "100px", width: "100px"}} />
+                                <img src={userIcon} style={{height: "100px", width: "100px"}} alt="" />
                                 <br></br>
                                 <br></br>
                                 <h4>{props.name}</h4>
                                 <h6>@{props.username}</h6>
                             </div>
                             <div className='post-button mt-5'>
-                                <Button imgUrl={addIcon} description="Post Collaboration" bgColor="#109c5b" />
+                                <CollabPostCard />
                             </div>
                         </div>
                     </div>

@@ -15,7 +15,7 @@ const CollabSkillsModal = (props) => {
     return (
         <div>
             <Button imgUrl={raiseHand} description="Collab" textColor="white" bgColor="green" onClick={handleShow} />
-            <Modal show={show} onHide={handleClose} backdrop="static" variant="top" centered>
+            <Modal show={show} onHide={handleClose} backdrop="static" variant="top" centered scrollable>
                 <Modal.Header closeButton>
                     <Modal.Title>Skill Set</Modal.Title>
                 </Modal.Header>

@@ -1,0 +1,92 @@
+import React from 'react';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import {useState, useEffect} from 'react';
+import ImageUpload from './ImageUpload';
+
+const CollabPostForm = () => {
+
+    let [skillSet, setSkillSet] = useState([]);
+    let color = ["red", "green", "brown"];
+
+    const addSkill = ()=>{
+        let skill = document.getElementById("getReqSkill").value;
+        skillSet = [...skillSet, skill];
+        setSkillSet(skillSet);
+    }
+
+    const removeSkill = (skill)=>{
+        let temp = [...skillSet];
+        let index = temp.indexOf(skill);
+        temp.splice(index, 1);
+        setSkillSet(temp);
+    }
+
+    useEffect(()=>{
+        document.getElementById("getReqSkill").value="";
+    }, [skillSet])
+
+    return (
+        <div>
+            <Form>
+                <ImageUpload />
+                <br></br>
+                <Form.Group className='mb-3'>
+                    <Form.Label><b>Contest Name:</b></Form.Label>
+                    <Form.Control type="text" placeholder="Enter Contest Name" />
+                </Form.Group>
+                <Row>
+                    <Col>
+                        <Form.Group className='mb-3'>
+                            <Form.Label><b>End Date:</b></Form.Label>
+                            <Form.Control type="date" />
+                            <Form.Text>Deadline to accept requests</Form.Text>
+                        </Form.Group>
+                    </Col>
+                    <Col>
+                        <Form.Group className='mb-3'>
+                            <Form.Label><b>Domain:</b></Form.Label>
+                            <Form.Control type="text" placeholder='Enter Domain' />
+                            <Form.Text>e.g: Web Development</Form.Text>
+                        </Form.Group>
+                    </Col>
+                </Row>
+                <Form.Group className='mb-3'>
+                    <Form.Label><b>Skill Set Required</b></Form.Label>
+                    <InputGroup className='mb-3'>
+                        <Form.Control type="text" placeholder='Enter a Skill' id="getReqSkill" />
+                        <Button variant='success' onClick={addSkill}>Add</Button>
+                    </InputGroup>
+                        
+                    {skillSet.length !== 0 ? 
+                        <div className='displayReqSkills border p-2'>
+                            <b>Selected Skills:</b>
+                            <br></br>
+                            <hr></hr>
+                            {skillSet.map((skill, key)=>(
+                                <p className='border p-2' key={key} style={{backgroundColor: color[key%3], color: "white", display: "inline-block"}}>
+                                    <span role="button" onClick={()=>removeSkill(skill)}> x </span>
+                                    {skill}
+                                </p>    
+                            ))}
+                        </div> 
+                        : <p></p>
+                    }
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <Form.Label><b>Candidates Required:</b></Form.Label>
+                    <Form.Control type="number" min={1} />
+                </Form.Group>     
+                <Form.Group className='mb-3'>
+                    <Form.Label><b>Description:</b></Form.Label>
+                    <Form.Control as="textarea" rows={3} />
+                </Form.Group>   
+            </Form>
+        </div>
+    );
+}
+
+export default CollabPostForm;
