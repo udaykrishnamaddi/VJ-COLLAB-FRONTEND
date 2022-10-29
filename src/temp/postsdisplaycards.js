@@ -1,16 +1,9 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
-import CardHeader from 'react-bootstrap/esm/CardHeader';
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Modall from './modal.js';
 
-
-
 function WithHeaderStyledExample() {
-
-    
 
   return (
 
