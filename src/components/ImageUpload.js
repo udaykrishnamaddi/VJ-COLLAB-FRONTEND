@@ -37,7 +37,6 @@ const ImageUpload = ()=>{
             <h5 className="text-center image-upload-wrap pt-3" style={{width: "300px", height: "100px"}}>Upload your photo</h5>
           </div>
         )}
-        {console.log(image)}
       </label>
       <input
         type="file"

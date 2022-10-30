@@ -28,6 +28,18 @@ const CollabPostForm = () => {
     useEffect(()=>{
         document.getElementById("getReqSkill").value="";
     }, [skillSet])
+    
+    const addSkillOnEnter = ()=>{
+        let input = document.getElementById("getReqSkill");
+        input.addEventListener("keypress", function(event){
+            if(event.key==="Enter"){
+                event.preventDefault();
+                if(input.value!==""){
+                    document.getElementById("addSkill").click();
+                }
+            }
+        })
+    }
 
     return (
         <div>
@@ -55,10 +67,10 @@ const CollabPostForm = () => {
                     </Col>
                 </Row>
                 <Form.Group className='mb-3'>
-                    <Form.Label><b>Skill Set Required</b></Form.Label>
+                    <Form.Label><b>Skill Set Required:</b></Form.Label>
                     <InputGroup className='mb-3'>
-                        <Form.Control type="text" placeholder='Enter a Skill' id="getReqSkill" />
-                        <Button variant='success' onClick={addSkill}>Add</Button>
+                        <Form.Control type="text" placeholder='Enter a Skill' id="getReqSkill" onClick={addSkillOnEnter} />
+                        <Button id="addSkill" variant='success' onClick={addSkill}>Add</Button>
                     </InputGroup>
                         
                     {skillSet.length !== 0 ? 
