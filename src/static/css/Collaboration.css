@@ -1,0 +1,7 @@
+.collabFeed-bar{
+    position: fixed;
+    overflow-y: scroll;
+    top: 0px;
+    bottom: 0px;
+    text-align: center;
+}
