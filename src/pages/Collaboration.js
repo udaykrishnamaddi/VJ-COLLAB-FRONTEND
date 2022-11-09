@@ -1,9 +1,16 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import CollabFeedCard from '../components/CollabFeedCard';
 import userIcon from '../static/icons/user-icon.png';
 import '../static/css/Collaboration.css';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
 import CollabPostCard from '../components/CollabPostCard';
+// import CollabSkillsModal from './CollabSkillsModal';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import './Sideebar.css'
+import '../static/css/Collaboration.css';
+
 
 const Collaboration = (props) => {
     let data={
@@ -18,10 +25,43 @@ const Collaboration = (props) => {
         skills: ['HTML', 'ReactJS', 'NodeJS']
     }
     return (
-        <div>
-            <div className='container'>
+        <div className='collabee'>
+                <h1 className='text-center m-0'>Your feed!</h1>
+                <Row xs={1} md={3} className="g-4 m-3">
+                    {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
+                        <Col className=''>
+                             <CollabFeedCard {...data} />
+                        </Col>
+                        <Col className=''>
+                             <CollabFeedCard {...data} />
+
+                        </Col>
+                        <Col className=''>
+                             <CollabFeedCard {...data} />
+
+                        </Col>
+                        <Col className=''>
+                             <CollabFeedCard {...data} />
+
+                        </Col>
+                    
+                </Row>    
+
+                
+
+
+
+
+            <div className='container-fluid'>
+                
                 <div className='row'>
-                    <div className='col-3'>
+
+
+
+
+
+
+                    {/* <div className='col-3'>
                         <div className='profile-bar text-center w-100'>
                             <div className='profile mt-5'>
                                 <img src={userIcon} style={{height: "100px", width: "100px"}} alt="" />
@@ -34,17 +74,27 @@ const Collaboration = (props) => {
                                 <CollabPostCard />
                             </div>
                         </div>
-                    </div>
-                    <div className='col-9'>
-                        <div className='collabFeed-bar text-center border'>
+                    </div> */}
+                    
+                    {/* <div className='col'> */}
+
+                {/* uncomment errors check */}
+
+
+                        {/* <div className='collabFeed-bar text-center border'>
                             <div className='w-75 mx-auto' style={{paddingTop: "80px"}}>
+
                                 <CollabFeedCard {...data} />
                                 <CollabFeedCard {...data} />
                                 <CollabFeedCard {...data} />
                                 <CollabFeedCard {...data} />
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+
+
+
+
+                    {/* </div> */}
                 </div>
             </div>
         </div>
