@@ -101,7 +101,7 @@ import Button from 'react-bootstrap/Button';
 const ForumFeedCard = (props) => {
     return (
         <div>
-            <Card className='mb-4 shadow'>
+            <Card className='m-5 shadow'>
                 <Card.Header>
                     <Card.Img className='img-fluid' variant='top' src={userIcon} style={{height: "45px", width: "45px", float: "left"}} />
                     <div className='float-start'>
@@ -109,48 +109,35 @@ const ForumFeedCard = (props) => {
                         <p className='m-0'>@{props.username}</p>
                     </div>
                 </Card.Header>
-                { props.img!=null ? <Card.Img variant="top" src={props.img} className="img-fluid" /> : <span></span> }
+                {/* { props.img!=null ? <Card.Img variant="top" src={props.img} className="img-fluid" /> : <span></span> } */}
                 <Card.Body className='p-0 mt-1'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-12' style={{borderWidth: "1px", borderRightStyle: "solid"}}>
-                                <Card.Title>
-                                    <h3 className='m-1'>{props.title}</h3>
-                                    <hr className='w-75 mx-auto m-0'></hr>
-                                </Card.Title>
-                                <p>{props.description}</p>
-                            </div>
-                            {/* <div className='col-3'>
-                                <ListGroup className='mt-1'>
-                                    <ListGroupItem>
-                                        <b>Date: </b>{props.endDate}
-                                        </ListGroupItem>
-                                    <ListGroupItem>
-                                        <img src={teamIcon} style={{height: "25px", weight: "25px", float: "left"}} alt="" /> 
-                                        {props.required!=null ? props.required : '-'}
-                                    </ListGroupItem>
-                                    <ListGroupItem className='p-0'>
-                                        <Dropdown>
-                                            <Dropdown.Toggle variant="light" className='w-100'>
-                                                Skills
-                                            </Dropdown.Toggle>
-                                            <Dropdown.Menu className='text-center' variant="dark">
-                                                {props.skills.map((skill, key) => (
-                                                    <Dropdown.Item key={key}>{skill}</Dropdown.Item>
-                                                ))}
-                                            </Dropdown.Menu>
-                                        </Dropdown>
-                                    </ListGroupItem>
-                                </ListGroup>
-                            </div> */}
-                        </div>
-                    </div>
+                <Card.Title>
+                    <h3 className='m-1'>{props.title}</h3>
+                    {/* <hr className='w-75 mx-auto m-0'></hr> */}
+                </Card.Title>
+
+
+                    
                 </Card.Body>
                 <Card.Footer className='mt-1'>
-                    <Button variant="primary">Post Comment</Button>
+                    <div className='d-flex justify-content-left'>
+                        <h6>12 comments</h6>
+
+                    </div>
+                    <div className='d-flex justify-content-left'>
+                        <Button variant="primary">Answer</Button>
+
+                    </div>
                     {/* <CollabSkillsModal skills={props.skills} /> */}
                 </Card.Footer>
             </Card>
+            <hr className='w-75 mx-auto m-0'style={{
+            color: 'black',
+            backgroundColor: 'black',
+            height:'3px'
+        }} ></hr>
+
+
         </div>
     );
 }

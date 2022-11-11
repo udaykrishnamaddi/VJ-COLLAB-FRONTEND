@@ -7,11 +7,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import CollabSkillsModal from './CollabSkillsModal';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import '../static/css/CollabFeedCard.css';
+
 const CollabFeedCard = (props) => {
     return (
     <div className='m-1'>
             
-                <Card className=' shadow'>
+                <Card className='collabeefeedcard shadow'>
                             <Card.Header className=''>
                                 <Card.Img className='img-fluid' variant='top' src={userIcon} style={{height: "45px", width: "45px", float: "left"}} />
                                 <div className='float-start'>

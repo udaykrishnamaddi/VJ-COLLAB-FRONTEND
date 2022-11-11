@@ -25,8 +25,9 @@ const Collaboration = (props) => {
         skills: ['HTML', 'ReactJS', 'NodeJS']
     }
     return (
-        <div className='collabee'>
-                <h1 className='text-center m-0'>Your feed!</h1>
+        <div className=''>
+            <div className=''>
+            <h1 className='text-center m-0'>Your feed!</h1>
                 <Row xs={1} md={3} className="g-4 m-3">
                     {/* {Array.from({ length: 4 }).map((_, idx) => ( */}
                         <Col className=''>
@@ -97,6 +98,9 @@ const Collaboration = (props) => {
                     {/* </div> */}
                 </div>
             </div>
+
+            </div>
+                
         </div>
     );
 }
