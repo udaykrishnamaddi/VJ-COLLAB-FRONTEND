@@ -1,15 +1,15 @@
 import './App.css';
-import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Container, Nav, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import signInIcon from './static/icons/google-signin.png';
 import vjCollabIcon from './static/icons/vjcollab-icon.png';
 import Button from './subComponents/Button';
 import Home from './pages/Home'
 import Profile from './pages/Profile'
-
 import Collaboration from './pages/Collaboration';
 import Forum from './pages/Forum';
 import {Routes, Route} from 'react-router-dom';
-// import './static/css/Ap.css';
+import CommentsPage from './components/CommentsPage';
+
 function App() {
   return (
     <div>
@@ -28,7 +28,14 @@ function App() {
               <Nav.Link href="/collaboration" className='collab text-white'>Collab</Nav.Link>
               <Nav.Link href="/forum" className='forum text-white'>Forums</Nav.Link>
               <Nav.Link href="/profile" className='forum text-white'>Profile</Nav.Link>
-              <Button  imgUrl={signInIcon} description="Log In" textColor="black" bgColor="white" />
+              <OverlayTrigger 
+                placement={"bottom"} 
+                overlay={<Tooltip><strong>Login with college domain mail id.</strong></Tooltip>}
+              >
+                <span>
+                  <Button  imgUrl={signInIcon} description="Log In" textColor="black" bgColor="white" />
+                </span>
+              </OverlayTrigger>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -39,6 +46,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/collaboration" element={<Collaboration name="Maddi Uday Krishna" username="20071A6627" />} />
         <Route path="/forum" element={<Forum />} />
+        <Route path="/commentspage" element={<CommentsPage />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
