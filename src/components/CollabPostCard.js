@@ -14,8 +14,6 @@ const CollabPostCard = () => {
     return (
         <div>
             <Button imgUrl={addIcon} description="Post Collaboration" bgColor="#109c5b" onClick={handleShow} />
-
-            {/* Modal for collaboration post form */}
             <Modal size="lg" show={show} onHide={handleClose} backdrop="static" scrollable centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Create Post</Modal.Title>

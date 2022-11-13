@@ -1,13 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CollabFeedCard from '../components/CollabFeedCard';
 import userIcon from '../static/icons/user-icon.png';
-import '../static/css/Collaboration.css';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
-import CollabPostCard from '../components/CollabPostCard';
-
-// import './Sideebar.css'
-
 
 const Profile = (props) => {
     let data={
@@ -23,11 +17,8 @@ const Profile = (props) => {
     }
     return (
         <div>
-
             <h1 className='text-center m-5'>Your Profile!</h1>
-            
             <div className='container-fluid'>
-                
                 <div className='row'>
                     <div className='col'>
                         <div className='profile-bar text-center w-100'>
@@ -38,12 +29,8 @@ const Profile = (props) => {
                                 <h4>Maddi Uday Krishna</h4>
                                 <h6>@20071A6627</h6>
                             </div>
-                            {/* <div className='post-button mt-5'>
-                                <CollabPostCard />
-                            </div> */}
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>

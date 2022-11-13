@@ -12,7 +12,7 @@ import {Routes, Route} from 'react-router-dom';
 // import './static/css/Ap.css';
 function App() {
   return (
-    <div className='appe'>
+    <div>
 
       {/* Creating the Navbar */} 
       <Navbar collapseOnSelect expand="lg" className='bg-dark' variant="dark" style={{zIndex: "1"}}>
@@ -24,18 +24,13 @@ function App() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className='ms-auto'>
-
               <Nav.Link href="/" className='home text-white'>Home</Nav.Link>
               <Nav.Link href="/collaboration" className='collab text-white'>Collab</Nav.Link>
               <Nav.Link href="/forum" className='forum text-white'>Forums</Nav.Link>
               <Nav.Link href="/profile" className='forum text-white'>Profile</Nav.Link>
               <Button  imgUrl={signInIcon} description="Log In" textColor="black" bgColor="white" />
-              
             </Nav>
-
-
           </Navbar.Collapse>
-          
         </Container>
       </Navbar>
 
@@ -46,7 +41,6 @@ function App() {
         <Route path="/forum" element={<Forum />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-
     </div>
   );
 }
