@@ -32,7 +32,7 @@ const CollabFeedCard = (props) => {
                                 <ListGroup className='mt-1'>
                                     <ListGroupItem>
                                         <b>Date: </b>{props.endDate}
-                                        </ListGroupItem>
+                                    </ListGroupItem>
                                     <ListGroupItem>
                                         <img src={teamIcon} style={{height: "25px", weight: "25px", float: "left"}} alt="" /> 
                                         {props.required!=null ? props.required : '-'}
