@@ -3,9 +3,9 @@ import Button from '../subComponents/Button';
 import addIcon from '../static/icons/add-icon.png';
 import {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
-import CollabPostForm from './CollabPostForm';
+import ForumPostForm from './ForumPostForm';
 
-const CollabPostCard = () => {
+const ForumPostCard = () => {
 
     let [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
@@ -13,13 +13,14 @@ const CollabPostCard = () => {
 
     return (
         <div>
-            <Button imgUrl={addIcon} description="Post Collaboration" bgColor="#109c5b" onClick={handleShow} />
+            <Button imgUrl={addIcon} description="Ask a Question" bgColor="#109c5b" onClick={handleShow} />
+            
             <Modal size="lg" show={show} onHide={handleClose} backdrop="static" scrollable centered>
                 <Modal.Header closeButton>
-                    <Modal.Title>Create Post</Modal.Title>
+                    <Modal.Title>Post your doubts here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <CollabPostForm />
+                    <ForumPostForm />
                 </Modal.Body>
                 <Modal.Footer>
                     <Button description="Discard" textColor="white" bgColor="red" onClick={handleClose} />
@@ -30,4 +31,4 @@ const CollabPostCard = () => {
     );
 }
 
-export default CollabPostCard;
+export default ForumPostCard;
