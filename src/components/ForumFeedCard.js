@@ -1,41 +1,30 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import userIcon from '../static/icons/user-icon.png';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
+import "../static/css/ForumFeedCard.css";
 
-const ForumFeedCard = (props) => {
+const ForumFeedCardDiv = (props) => {
     return (
         <div>
-            <Card className='m-5 shadow'>
-                <Card.Header>
-                    <Card.Img className='img-fluid' variant='top' src={userIcon} style={{height: "45px", width: "45px", float: "left"}} />
-                    <div className='float-start'>
-                        <h6 className='m-0'>{props.name}</h6>
-                        <p className='m-0'>@{props.username}</p>
-                    </div>
-                </Card.Header>
-                <Card.Body className='p-0 mt-1'>
-                <Card.Title>
-                    <h3 className='m-1'>{props.title}</h3>
-                </Card.Title>
-                </Card.Body>
-                <Card.Footer className='mt-1'>
-                    <div className='d-flex justify-content-left'>
-                        <h6>12 comments</h6>
-                    </div>
-                    <div className='d-flex justify-content-left'>
-                        <Button variant="primary">Answer</Button>
-                    </div>
-                </Card.Footer>
-            </Card>
-            <hr className='w-75 mx-auto m-0'style={{
-                color: 'black',
-                backgroundColor: 'black',
-                height:'3px'
-                }}>    
-            </hr>
+            <div className='forum-card m-5 border shadow rounded p-2 mx-auto' style={{ width: "75vw" }}>
+                <div className='header h-25 ms-2'>
+                    <p className='m-0'><b>{props.name}</b></p>
+                    <p>@{props.username}</p>
+                </div>
+                <hr />
+                <div className='body mt-3 ms-3'>
+                    <h4>{props.title}</h4>
+                </div>
+
+                <div className='button p-3  '>
+                    <Link to="/commentspage">
+                        <Button variant="success">View</Button>
+                    </Link>
+                </div>
+            </div>
         </div>
+
     );
 }
 
-export default ForumFeedCard;
+export default ForumFeedCardDiv;

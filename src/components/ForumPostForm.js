@@ -2,7 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import {useState} from 'react';
+import { useState } from 'react';
 import DiscussionImageUpload from './ImageUpload';
 
 const ForumPostForm = () => {
@@ -26,7 +26,7 @@ const ForumPostForm = () => {
     // useEffect(()=>{
     //     document.getElementById("getReqSkill").value="";
     // }, [skillSet])
-    
+
     // const addSkillOnEnter = ()=>{
     //     let input = document.getElementById("getReqSkill");
     //     input.addEventListener("keypress", function(event){
@@ -67,7 +67,7 @@ const ForumPostForm = () => {
                 <Form.Group className='mb-3'>
                     <Form.Label><b>Description:</b></Form.Label>
                     <Form.Control as="textarea" rows={3} />
-                </Form.Group>   
+                </Form.Group>
             </Form>
         </div>
     );

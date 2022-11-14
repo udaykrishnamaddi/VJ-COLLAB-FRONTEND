@@ -1,5 +1,5 @@
 import React from 'react';
-import ForumFeedCardDiv from '../components/ForumFeedCardDiv'
+import ForumFeedCardDiv from '../components/ForumFeedCard'
 import reactimage from '../static/icons/reactimage.webp';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';

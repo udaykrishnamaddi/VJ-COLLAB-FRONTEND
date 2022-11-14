@@ -52,6 +52,7 @@ const Home = () => {
                                     <Link className='text-white' to="/forum" style={{ textDecoration: "none" }}>Forum</Link>
                                 </button>
                                 <br></br>
+                                <br></br>
                             </div>
                         </div>
                     </div>
