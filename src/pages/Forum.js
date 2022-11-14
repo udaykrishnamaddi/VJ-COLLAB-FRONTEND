@@ -3,6 +3,7 @@ import ForumFeedCardDiv from '../components/ForumFeedCardDiv'
 import reactimage from '../static/icons/reactimage.webp';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import { Button } from 'react-bootstrap';
 
 const Forum = (props) => {
     let data={
@@ -16,7 +17,12 @@ const Forum = (props) => {
     }
     return (
         <div className='forumee'>
-            <h1 className='text-center m-4'>Welcome to Discussion Portal.</h1>
+            
+            <div className='text-center' style={{marginLeft: "15vw"}}>
+                <h1 className='d-inline-block'>Welcome to Discussion Portal.</h1>
+                <Button className='float-end mt-2' style={{marginRight: "15px"}}> + Ask a question</Button>
+            </div>
+
             <Row  xs={1} md={1} className="g-4 m-3">
                 <Col>
                     <ForumFeedCardDiv {...data}/>
