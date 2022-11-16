@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react';
-import { Button, FormControl, FormGroup, FormLabel, InputGroup } from 'react-bootstrap';
+import { Button, Card, FormControl, FormGroup, FormLabel, InputGroup } from 'react-bootstrap';
 import userIcon from '../static/icons/user-icon.png';
 import { RiAddCircleFill } from 'react-icons/ri';
 import { AiFillDelete } from 'react-icons/ai';
+import ForumReply from './ForumReply';
 
 function CommentsPage(props) {
 
@@ -38,10 +39,10 @@ function CommentsPage(props) {
   console.log(addLink)
 
   return (
-    <div className='mt-3 mb-3 shadow rounded-3 w-75 mx-auto p-3'>
-      <div className='m-5 border p-3'>
+    <div className='mt-3 mb-3  rounded-3 w-75 mx-auto p-3'>
+      <div className='m-5 border p-3 shadow'>
         {/* image */}
-        <div>
+        <div >
           <img className='img-fluid ' variant='top' src={userIcon} style={{ height: "45px", width: "45px", float: "left" }} />
           <div>
             <h5 className='m-0'><b>saiteja</b></h5>
@@ -54,7 +55,7 @@ function CommentsPage(props) {
           <h3>
             <b>How does react work?How do i conditionally render react components</b>
           </h3>
-          <p>
+          <p >
             px usually a form of nonsense Latin, but here are 10 generators that make the
             text more interesting. If you want to generate standard lorem ipsum, you can
             generate it in Word or from various websites. “Standard” is so boring though,
@@ -64,6 +65,9 @@ function CommentsPage(props) {
           <img src="https://miro.medium.com/max/1400/1*CGH27-rlhqPm2zhDDyqXFw.png" style={{ width: "60vw", height: "30vw" }} className="p-1"></img>
         </div>
       </div>
+      {/* reply section */}
+        <ForumReply/>
+        <ForumReply/>
       {/* comment area */}
       <div className='m-5'>
         <FormGroup>

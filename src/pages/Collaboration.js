@@ -3,6 +3,7 @@ import CollabFeedCard from '../components/CollabFeedCard';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import CollabPostCard from '../components/CollabPostCard';
 
 const Collaboration = (props) => {
     let data={
@@ -18,7 +19,10 @@ const Collaboration = (props) => {
     }
     return (
         <div>
-            <h1 className='text-center m-0'>Your feed!</h1>
+            <div className='text-center' style={{marginLeft: "15vw"}}>
+                
+                <CollabPostCard  />
+            </div>
             <Row xs={1} md={3} className="g-4 m-3">
                 <Col className='mx-auto'>
                     <CollabFeedCard {...data} />
