@@ -5,12 +5,26 @@ import vjCollabIcon from './static/icons/vjcollab-icon.png';
 import Button from './subComponents/Button';
 import Home from './pages/Home'
 import Profile from './pages/Profile'
-
+import DashboardCollabPosts from './pages/DashboardCollabPosts';
+import DashboardForumPosts from './pages/DashboardForumPosts';
 import Collaboration from './pages/Collaboration';
 import Forum from './pages/Forum';
+import vjHackathon from './static/icons/vj-hackathon.webp';
+
 import {Routes, Route} from 'react-router-dom';
 // import './static/css/Ap.css';
 function App() {
+  // let data={
+  //   name: "ukm",
+  //   username: "627",
+  //   img: vjHackathon,
+  //   title: "Frontend Developer",
+  //   description: "We are looking for frontend developer, our project is about developing a web site VjCollab, for students of our college.\
+  //   Intersted students please click the collab button for join with us and the end date for applying is 1/9/2022.",
+  //   endDate: "03-11-2022",
+  //   required: 3,
+  //   skills: ['HTML', 'ReactJS', 'NodeJS']
+  // }
   return (
     <div className='appe'>
 
@@ -44,7 +58,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/collaboration" element={<Collaboration name="Maddi Uday Krishna" username="20071A6627" />} />
         <Route path="/forum" element={<Forum />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} >
+          <Route path='' element={<DashboardCollabPosts  />} />
+          <Route path='/profile/dashboard-doubts' element={<DashboardForumPosts />} />
+
+        </Route>
       </Routes>
 
     </div>

@@ -20,6 +20,7 @@ import React from 'react';
 // import CollabFeedCard from '../components/CollabFeedCard';
 // import ForumFeedCard from '../components/ForumFeedCard'
 import ForumFeedCardDiv from '../components/ForumFeedCardDiv'
+import DashboardDoubts from '../components/DashboardDoubts'
 
 import userIcon from '../static/icons/user-icon.png';
 import '../static/css/Collaboration.css';
@@ -31,7 +32,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import '../static/css/ForumFeedCardDiv.css';
 
-const Forum = (props) => {
+const DashboardForumPosts = (props) => {
     let data={
         name: "Maddi Uday Krishna",
         username: "20071A6627",
@@ -43,22 +44,22 @@ const Forum = (props) => {
     }
     return (
         <div className='forumee'>
-                <h1 className='text-center m-4'>Welcome to Discussion Portal.</h1>
+                <h1 className='text-center m-4'>Your Queries!</h1>
                 <Row  xs={1} md={2} className="g-4 m-3">
                     <Col>
-                        <ForumFeedCardDiv {...data}/>
+                        <DashboardDoubts {...data}/>
 
                     </Col>
                     <Col>
-                        <ForumFeedCardDiv {...data}/>
+                        <DashboardDoubts {...data}/>
 
                     </Col>
                     <Col>
-                        <ForumFeedCardDiv {...data}/>
+                        <DashboardDoubts {...data}/>
 
                     </Col>
                     <Col>
-                        <ForumFeedCardDiv {...data}/>
+                        <DashboardDoubts{...data}/>
 
                     </Col>
                 </Row>
@@ -205,5 +206,5 @@ const Forum = (props) => {
     );
 }
 
-export default Forum;
+export default DashboardForumPosts;
 
