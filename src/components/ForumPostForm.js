@@ -2,10 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import {useState, useEffect} from 'react';
-// import ImageUpload from './ImageUpload';
+import { useState } from 'react';
 import DiscussionImageUpload from './ImageUpload';
 
 const ForumPostForm = () => {
@@ -29,7 +26,7 @@ const ForumPostForm = () => {
     // useEffect(()=>{
     //     document.getElementById("getReqSkill").value="";
     // }, [skillSet])
-    
+
     // const addSkillOnEnter = ()=>{
     //     let input = document.getElementById("getReqSkill");
     //     input.addEventListener("keypress", function(event){
@@ -67,36 +64,10 @@ const ForumPostForm = () => {
                         </Form.Group>
                     </Col>
                 </Row>
-                {/* <Form.Group className='mb-3'>
-                    <Form.Label><b>Skill Set Required:</b></Form.Label>
-                    <InputGroup className='mb-3'>
-                        <Form.Control type="text" placeholder='Enter a Skill' id="getReqSkill" onClick={addSkillOnEnter} />
-                        <Button id="addSkill" variant='success' onClick={addSkill}>Add</Button>
-                    </InputGroup>
-                        
-                    {skillSet.length !== 0 ? 
-                        <div className='displayReqSkills border p-2'>
-                            <b>Selected Skills:</b>
-                            <br></br>
-                            <hr></hr>
-                            {skillSet.map((skill, key)=>(
-                                <p className='border p-2' key={key} style={{backgroundColor: color[key%3], color: "white", display: "inline-block"}}>
-                                    <span role="button" onClick={()=>removeSkill(skill)}> x </span>
-                                    {skill}
-                                </p>    
-                            ))}
-                        </div> 
-                        : <p></p>
-                    }
-                </Form.Group> */}
-                {/* <Form.Group className='mb-3'>
-                    <Form.Label><b>Candidates Required:</b></Form.Label>
-                    <Form.Control type="number" onKeyPress={(e) => !/[0-9]/.test(e.key) && e.preventDefault()} />
-                </Form.Group>      */}
                 <Form.Group className='mb-3'>
                     <Form.Label><b>Description:</b></Form.Label>
                     <Form.Control as="textarea" rows={3} />
-                </Form.Group>   
+                </Form.Group>
             </Form>
         </div>
     );

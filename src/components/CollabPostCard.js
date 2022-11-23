@@ -1,6 +1,5 @@
 import React from 'react';
-import Button from '../subComponents/Button';
-import addIcon from '../static/icons/add-icon.png';
+import {Button} from 'react-bootstrap';
 import {useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
 import CollabPostForm from './CollabPostForm';
@@ -13,9 +12,11 @@ const CollabPostCard = () => {
 
     return (
         <div>
-            <Button imgUrl={addIcon} description="Post Collaboration" bgColor="#109c5b" onClick={handleShow} />
-
-            {/* Modal for collaboration post form */}
+            <div className='text-center' >
+                <h1 className='d-inline-block text-center'>Your Feed.</h1>
+                <Button className='float-end mt-2' style={{marginRight: "15px"}} onClick={handleShow}> + Post Collaboration</Button>
+            </div>
+            
             <Modal size="lg" show={show} onHide={handleClose} backdrop="static" scrollable centered>
                 <Modal.Header closeButton>
                     <Modal.Title>Create Post</Modal.Title>
@@ -24,8 +25,8 @@ const CollabPostCard = () => {
                     <CollabPostForm />
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button description="Discard" textColor="white" bgColor="red" onClick={handleClose} />
-                    <Button description="Post" textColor="white" bgColor="green" onClick={handleClose} />
+                    <Button className='btn btn-danger' onClick={handleClose}>Discard</Button>
+                    <Button className='btn btn-success ' onClick={handleClose}>Post</Button>
                 </Modal.Footer>
             </Modal>
         </div>

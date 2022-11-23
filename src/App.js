@@ -1,5 +1,5 @@
 import './App.css';
-import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
+import {Navbar, Container, Nav, OverlayTrigger, Tooltip} from 'react-bootstrap';
 import signInIcon from './static/icons/google-signin.png';
 import vjCollabIcon from './static/icons/vjcollab-icon.png';
 import Button from './subComponents/Button';
@@ -9,10 +9,9 @@ import DashboardCollabPosts from './pages/DashboardCollabPosts';
 import DashboardForumPosts from './pages/DashboardForumPosts';
 import Collaboration from './pages/Collaboration';
 import Forum from './pages/Forum';
-import vjHackathon from './static/icons/vj-hackathon.webp';
-
 import {Routes, Route} from 'react-router-dom';
-// import './static/css/Ap.css';
+import CommentsPage from './components/CommentsPage';
+
 function App() {
   // let data={
   //   name: "ukm",
@@ -26,7 +25,7 @@ function App() {
   //   skills: ['HTML', 'ReactJS', 'NodeJS']
   // }
   return (
-    <div className='appe'>
+    <div>
 
       {/* Creating the Navbar */} 
       <Navbar collapseOnSelect expand="lg" className='bg-dark' variant="dark" style={{zIndex: "1"}}>
@@ -38,18 +37,20 @@ function App() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className='ms-auto'>
-
               <Nav.Link href="/" className='home text-white'>Home</Nav.Link>
               <Nav.Link href="/collaboration" className='collab text-white'>Collab</Nav.Link>
               <Nav.Link href="/forum" className='forum text-white'>Forums</Nav.Link>
               <Nav.Link href="/profile" className='forum text-white'>Profile</Nav.Link>
-              <Button  imgUrl={signInIcon} description="Log In" textColor="black" bgColor="white" />
-              
+              <OverlayTrigger 
+                placement={"bottom"} 
+                overlay={<Tooltip><strong>Login with college domain mail id.</strong></Tooltip>}
+              >
+                <span>
+                  <Button  imgUrl={signInIcon} description="Log In" textColor="black" bgColor="white" />
+                </span>
+              </OverlayTrigger>
             </Nav>
-
-
           </Navbar.Collapse>
-          
         </Container>
       </Navbar>
 
@@ -61,10 +62,10 @@ function App() {
         <Route path="/profile" element={<Profile />} >
           <Route path='' element={<DashboardCollabPosts  />} />
           <Route path='/profile/dashboard-doubts' element={<DashboardForumPosts />} />
-
         </Route>
+        <Route path="/commentspage" element={<CommentsPage />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
-
     </div>
   );
 }
