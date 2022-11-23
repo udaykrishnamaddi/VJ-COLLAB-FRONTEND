@@ -2,7 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import userIcon from '../static/icons/user-icon.png';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
-
+import { Outlet, Link } from 'react-router-dom';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 const Profile = (props) => {
     let data={
         name: props.name,

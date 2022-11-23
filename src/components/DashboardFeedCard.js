@@ -7,9 +7,15 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import CollabSkillsModal from './CollabSkillsModal';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import '../static/css/CollabFeedCard.css';
+import { Link } from 'react-router-dom';
+import Button from '../subComponents/Button';
+import { useState } from 'react';
 
 const DashboardFeedCard = (props) => {
+    let [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
     <div className='m-1'>
                 
@@ -95,20 +101,18 @@ const DashboardFeedCard = (props) => {
                             </Card.Body>
 
 
+                    <Card.Footer className='mt-1 bg-dark'>
+                        {/* <DashboardCollabRepliesModal /> */}
+                        <div className='button p-3  '>
+                        {/* <Button  onClick={handleShow} variant="success">View Your Replies</Button> */}
+                        <div className='d-flex'>
+                            <Link className='text-warning'  style={{ textDecoration: 'none', justifyContent:'left' }} backdrop="static" variant="top" centered scrollable to="/collabfeedcard-responses">12 members want to collab!</Link>
 
+                        </div>                                        
+                            
 
-
-
-
-
-
-
-
-
-
-
-                    <Card.Footer className='mt-1'>
-                        <CollabSkillsModal skills={props.skills} />
+                        </div>
+                        
                     </Card.Footer>
                 </Card>
                     

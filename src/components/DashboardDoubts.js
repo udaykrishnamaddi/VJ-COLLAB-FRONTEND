@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-
+import { Link } from 'react-router-dom';
 
 
 const DashboardDoubts = (props) => {
@@ -25,7 +25,11 @@ const DashboardDoubts = (props) => {
                     <h3 className='m-1'>{props.title}</h3>
                     <br/>
                     <h6>12 comments</h6>
-                    <Button variant="success">Your Replies</Button>
+                    <Link style={{ textDecoration: 'none' }} backdrop="static" variant="top" centered scrollable to="/commentspage">
+                        <Button variant="success">Your Replies</Button>
+
+                    </Link>
+
 
 
                 </Col>

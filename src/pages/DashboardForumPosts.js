@@ -1,36 +1,19 @@
-// import React from 'react';
-// import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
-// import ForumFeedCard from '../components/ForumFeedCard'
 
-// const Forum = () => {
-//     return (
-//         <div>
-//             <h1 className='text-center m-5'>Discussion Portal!</h1>
-//             <ForumFeedCard/>
-//         </div>
-//     );
-// }
-
-// export default Forum;
 
 
 
 import React from 'react';
 // import CollabFeedCard from '../components/CollabFeedCard';
 // import ForumFeedCard from '../components/ForumFeedCard'
-import ForumFeedCardDiv from '../components/ForumFeedCardDiv'
 import DashboardDoubts from '../components/DashboardDoubts'
 
 import userIcon from '../static/icons/user-icon.png';
-import '../static/css/Collaboration.css';
 // import vjHackathon from '../static/icons/vj-hackathon.webp';
 import reactimage from '../static/icons/reactimage.webp';
 // import CollabPostCard from '../components/CollabPostCard';
 import ForumPostCard from '../components/ForumPostCard';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import '../static/css/ForumFeedCardDiv.css';
 
 const DashboardForumPosts = (props) => {
     let data={

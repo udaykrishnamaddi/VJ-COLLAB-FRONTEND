@@ -11,7 +11,7 @@ import Collaboration from './pages/Collaboration';
 import Forum from './pages/Forum';
 import {Routes, Route} from 'react-router-dom';
 import CommentsPage from './components/CommentsPage';
-
+import CollabFeedCardResponses from './components/CollabFeedCardResponses';
 function App() {
   // let data={
   //   name: "ukm",
@@ -64,6 +64,7 @@ function App() {
           <Route path='/profile/dashboard-doubts' element={<DashboardForumPosts />} />
         </Route>
         <Route path="/commentspage" element={<CommentsPage />} />
+        <Route path="/collabfeedcard-responses" element={<CollabFeedCardResponses/>} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>

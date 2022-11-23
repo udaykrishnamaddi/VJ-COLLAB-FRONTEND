@@ -2,14 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DashboardFeedCard from '../components/DashboardFeedCard';
 import userIcon from '../static/icons/user-icon.png';
-import '../static/css/Collaboration.css';
 import vjHackathon from '../static/icons/vj-hackathon.webp';
 import CollabPostCard from '../components/CollabPostCard';
-// import CollabSkillsModal from './CollabSkillsModal';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import './Sideebar.css'
-import '../static/css/Collaboration.css';
 
 
 const DashboardCollabPosts = (props) => {

@@ -62,7 +62,7 @@ function CommentsPage(props) {
             especially when the original text is taken from a 1st-century Roman orator.
           </p>
           <h6 className='bold'>Code:</h6>
-          <img src="https://miro.medium.com/max/1400/1*CGH27-rlhqPm2zhDDyqXFw.png" style={{ width: "60vw", height: "30vw" }} className="p-1"></img>
+          {/* <img src="https://miro.medium.com/max/1400/1*CGH27-rlhqPm2zhDDyqXFw.png" style={{ width: "60vw", height: "30vw" }} className="p-1"></img> */}
         </div>
       </div>
       {/* reply section */}
